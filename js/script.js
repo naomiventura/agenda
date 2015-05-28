@@ -6,31 +6,42 @@ $liste = document.getElementById("liste");
 
 
 contacts = [{
-    prenom: "Julien",
-    nom: "Grillot"
+   prenom: "Julien",
+   nom: "Grillot"
 }, {
-    prenom: "John",
-    nom: "Smith"
+   prenom: "John",
+   nom: "Smith"
 }, {
-    prenom : "Yoan",
-    nom: "Dieu"
+   prenom : "Yoan",
+   nom: "Dieu"
 }, {
-    prenom:"Erwan" ,
-    nom: "Kezzar"
+   prenom:"Erwan" ,
+   nom: "Kezzar"
 } , {
-    prenom: "Naomi"  ,
-    nom: "Ventura"
+   prenom: "Naomi"  ,
+   nom: "Ventura"
 },  {
-    prenom: "Jean" ,
-    nom: "Dupond"
+   prenom: "Jean" ,
+   nom: "Dupond"
 }];
 
 
 function afficherListe() {
-    _.each(contacts, function (contact) {
-    $liste.innerHTML += "<li>" + contact.prenom + " " + contact.nom + "</li>";
+   _.each(contacts, function (contact) {
+   $liste.innerHTML += "<li>" + contact.prenom + " " + contact.nom + "</li>";
 })
 }
 
+function ajouter() {
+    contacts.push({
+        prenom: $prenom.value,
+        nom: $nom.value,
+        numero: $numero.value
+    });
+    afficherListe();
+
+
+} 
 
 afficherListe();
+$button.onclick = ajouter;
