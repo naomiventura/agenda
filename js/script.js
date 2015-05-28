@@ -27,6 +27,10 @@ contacts = [{
    nom: "Dupond"
 }];
 
+function texteContact(contact) {
+    return contact.prenom + " " + contact.nom + " (" + contact.numero + ")";
+}
+
 function afficherListe() {
 	$liste.innerHTML = "";
   _.each(contacts, function (contact) {
@@ -52,9 +56,9 @@ function rechercher() {
             elements += "<li>" + texteContact(contacts[i]) + "</li>";
         }
     }
-    $resultats.innerHTML = elements;
+    $found.innerHTML = elements;
 }
 
 $rechercher.onclick = rechercher; 
 afficherListe();
-$button.onclick = ajouter ;
+$button.onclick = ajouter;
