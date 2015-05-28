@@ -1,0 +1,12 @@
+li {
+	 display : inline ;
+	 width : 250px ;
+	 height : auto ;
+	 background-color : black;
+	 color : white;
+         list-style : none;
+	 margin-right : 5px;
+	 margin-left : 5px;
+	 padding : 10px;
+}
+
