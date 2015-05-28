@@ -25,16 +25,11 @@ contacts = [{
     nom: "Dupond"
 }];
 
-function texteContact(contact) {
-    return contact.prenom + " " + contact.nom ;
-}
 
 function afficherListe() {
-    elements = "";
-    for (i = 0; i < contacts.length; i++) {
-        elements += "<li>" + texteContact(contacts[i]) + "</li>";
-    }
-    $liste.innerHTML = elements;
+    _.each(contacts, function (contact) {
+    $liste.innerHTML += "<li>" + contact.prenom + " " + contact.nom + "</li>";
+})
 }
 
 
