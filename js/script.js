@@ -1,3 +1,7 @@
+$button = document.getElementById("add");
+$nom = document.getElementById("nom");
+$prenom= document.getElementById("prenom");
+$numero = document.getElementById("numero");
 
 contacts = [{
     prenom: "Julien",
