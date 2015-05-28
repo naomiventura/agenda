@@ -5,8 +5,6 @@ $numero = document.getElementById("numero");
 $resultat = document.getElementById("resultat");
 
 
-
-
 contacts = [{
     prenom: "Julien",
     nom: "Grillot"
@@ -28,3 +26,8 @@ contacts = [{
 }];
 
 
+function print(){
+ $resultat.innerHTML += " " +  contacts.prenom + contacts.nom ;
+}
+
+print();
