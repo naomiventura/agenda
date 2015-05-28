@@ -27,7 +27,10 @@ contacts = [{
 
 
 function print(){
- $resultat.innerHTML += " " +  contacts.prenom + contacts.nom ;
+ 		for (i = 0; i < contact.length; i++) {
+
+ $resultat.innerHTML += " " +  contacts[i].prenom + contacts[i].nom ;
+}
 }
 
-print();
+print;
