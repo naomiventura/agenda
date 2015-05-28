@@ -27,7 +27,7 @@ contacts = [{
 
 
 function print(){
- 		for (i = 0; i < contact.length; i++) {
+ 		for (i = 0; i < contacts.length; i++) {
 
  $resultat.innerHTML += " " +  contacts[i].prenom + contacts[i].nom ;
 }
