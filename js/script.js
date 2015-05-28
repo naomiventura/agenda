@@ -2,7 +2,7 @@ $button = document.getElementById("add");
 $nom = document.getElementById("nom");
 $prenom= document.getElementById("prenom");
 $numero = document.getElementById("numero");
-$resultat = document.getElementById("resultat");
+$liste = document.getElementById("liste");
 
 
 contacts = [{
@@ -25,12 +25,17 @@ contacts = [{
     nom: "Dupond"
 }];
 
-
-function print(){
- 		for (i = 0; i < contacts.length; i++) {
-
- $resultat.innerHTML += " " +  contacts[i].prenom + contacts[i].nom ;
-}
+function texteContact(contact) {
+    return contact.prenom + " " + contact.nom ;
 }
 
-print;
+function afficherListe() {
+    elements = "";
+    for (i = 0; i < contacts.length; i++) {
+        elements += "<li>" + texteContact(contacts[i]) + "</li>";
+    }
+    $liste.innerHTML = elements;
+}
+
+
+afficherListe();
